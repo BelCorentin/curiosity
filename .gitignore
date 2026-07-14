@@ -1,0 +1,5 @@
+# local state — never share your own questions/notes/progress
+config.json
+questions.md
+notes/
+_progress.json

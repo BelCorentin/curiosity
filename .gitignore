@@ -3,3 +3,10 @@ config.json
 questions.md
 notes/
 _progress.json
+
+# python
+__pycache__/
+*.egg-info/
+dist/
+.venv/
+uv.lock

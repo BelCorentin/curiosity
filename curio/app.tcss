@@ -1,0 +1,171 @@
+/* curio — warm, dark, telescope-at-night vibes */
+
+Screen {
+    background: #16130f;
+}
+
+/* ------------------------------------------------------------------- home */
+
+#banner {
+    color: #f5b64a;
+    text-style: bold;
+    padding: 1 0;
+}
+
+#stats {
+    color: #b8a98c;
+    text-align: center;
+    padding: 0 0 1 0;
+    width: auto;
+}
+
+#menu {
+    width: 52;
+    height: auto;
+    padding: 1 0;
+}
+
+#menu Button {
+    width: 100%;
+    margin: 0 0 1 0;
+}
+
+Button {
+    background: #262019;
+    color: #e8dcc4;
+    border: tall #3a3126;
+}
+
+Button:hover {
+    background: #33291d;
+    border: tall #f5b64a;
+}
+
+Button.-primary {
+    background: #4a3517;
+    color: #ffd98a;
+}
+
+Button.-success {
+    background: #1e3a2a;
+    color: #a9e5c3;
+}
+
+/* ------------------------------------------------------------------- play */
+
+#play-title {
+    color: #f5b64a;
+    text-align: center;
+    text-style: bold;
+    padding: 1 0 0 0;
+}
+
+#chat {
+    padding: 1 2;
+}
+
+.bubble {
+    margin: 0 0 1 0;
+    padding: 0 2;
+    border: round #3a3126;
+    background: #1d1813;
+}
+
+.bubble.user {
+    border: round #4a5a3a;
+    background: #1c2216;
+    margin-left: 8;
+    color: #cfe0b8;
+}
+
+.bubble.claude {
+    margin-right: 8;
+}
+
+#status {
+    color: #8a7c62;
+    padding: 0 2;
+    height: 1;
+}
+
+#msg {
+    margin: 0 2 1 2;
+    border: tall #3a3126;
+    background: #1d1813;
+}
+
+#msg:focus {
+    border: tall #f5b64a;
+}
+
+/* ------------------------------------------------------------- flashcards */
+
+#flash-counter {
+    color: #b8a98c;
+    text-align: center;
+    padding: 1 0;
+}
+
+#flash-center {
+    height: 1fr;
+    align: center middle;
+}
+
+#card {
+    width: 70;
+    height: auto;
+    max-height: 80%;
+    border: round #f5b64a;
+    background: #1d1813;
+    padding: 1 2;
+}
+
+#card.flipped {
+    border: round #6cc08f;
+    background: #17201a;
+}
+
+#card-title {
+    color: #f5b64a;
+    text-style: bold;
+    text-align: center;
+    padding: 0 0 1 0;
+}
+
+#card.flipped #card-title {
+    color: #6cc08f;
+}
+
+#card-scroll {
+    height: auto;
+    max-height: 24;
+}
+
+#card-hint {
+    color: #6b5f4c;
+    text-align: center;
+    padding: 1 0 0 0;
+}
+
+/* ----------------------------------------------------------------- browse */
+
+#browse-title {
+    color: #f5b64a;
+    text-style: bold;
+    text-align: center;
+    padding: 1 0;
+}
+
+#note-list {
+    margin: 0 4;
+    background: #1d1813;
+    border: round #3a3126;
+}
+
+ListItem {
+    padding: 0 1;
+}
+
+ListView > ListItem.-highlight {
+    background: #4a3517;
+}

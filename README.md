@@ -38,6 +38,27 @@ ln -s "$(pwd)/curiosity/skills/curiosity" ~/.claude/skills/curiosity
 Then start Claude Code and type `/curiosity`. On first run it creates `~/curiosity/`, drops a
 starter `questions.md`, and asks you to fill it with your own curiosities.
 
+## `curio` — the terminal app
+
+The same game as a standalone TUI (built with [Textual](https://textual.textualize.io/) +
+the [Claude Agent SDK](https://code.claude.com/docs/en/agent-sdk)). Same config, same notes,
+same streak — the skill and the app share all state.
+
+```bash
+uv tool install -e ~/git/curiosity   # or: uv tool install .
+curio
+```
+
+- 🎯 **Riddle from my questions** — a fresh seed from your `questions.md`
+- 🌍 **Surprise me** — a commonly-unknown / poorly-understood fact, off-file
+- 🔁 **Revisit** — deepen an old topic from a new angle
+- 🃏 **Flashcards** — random cards built locally from your saved notes (no Claude call)
+- 📚 **Browse** — read your whole curiosity universe in-terminal
+
+Auth reuses your `claude` CLI login (subscription) — no API key. Game rounds run a real
+interactive Claude session that reads your questions, plays turn-by-turn, then writes the
+note, map entry, and progress update itself.
+
 ## Configure (optional)
 
 By default everything lives in `~/curiosity/` (`questions.md` + `notes/`). To point it elsewhere —

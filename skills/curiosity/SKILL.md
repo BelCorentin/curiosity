@@ -29,7 +29,7 @@ If it's absent, use defaults: `questions_file` = `~/curiosity/questions.md`,
 **First run & no questions file** → create `~/curiosity/`, seed `questions.md` from the repo's
 `examples/questions.example.md`, tell the user to fill it with their own curiosities, and stop.
 
-State: `<notes_dir>/_progress.json` · Map/hub: `<notes_dir>/<map_file>` · one note per topic in `<notes_dir>`.
+State: `<notes_dir>/_progress.json` · Map/hub: `<notes_dir>/<map_file>` · one note per topic in `<notes_dir>/<Category>/` (the `note` field in `_progress.json` is that relative path).
 
 ### `_progress.json` shape
 ```json
@@ -66,8 +66,10 @@ State: `<notes_dir>/_progress.json` · Map/hub: `<notes_dir>/<map_file>` · one 
    open, mind-opening question that makes them step back and doubt a tidy narrative (theirs or the
    culture's). This is the payload: perspective, not recall. NO testing them.
 
-6. **Write the note** (the point — knowledge must persist). New topic → create `<Title>.md` in
-   `notes_dir` (frontmatter below): the original question, the riddle, a crisp **What I learned**, the
+6. **Write the note** (the point — knowledge must persist). New topic → create `<Category>/<Title>.md` in
+   `notes_dir` — `<Category>` = the map section it belongs to, as a folder name without emoji (e.g.
+   `Culture/`, `Critical thinking/`, `Health/`, `Economy & Finance/`); reuse an existing folder, create one only
+   for a genuinely new map section. Never write topic notes loose at the root (frontmatter below): the original question, the riddle, a crisp **What I learned**, the
    **🔭 Zoom out**, **Open threads** (what to dig next), and `[[wikilinks]]` to related topic notes so
    the universe connects. Revisit → append a dated bullet. Then update the map file (list the topic +
    one-line hook, and promote juicy open threads) and `_progress.json`.

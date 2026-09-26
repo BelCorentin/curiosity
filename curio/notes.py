@@ -76,8 +76,8 @@ def list_notes(cfg: Config) -> list[Note]:
     if not cfg.notes_dir.is_dir():
         return []
     notes = []
-    for path in sorted(cfg.notes_dir.glob("*.md")):
-        if path.name.startswith("_") or path.name == cfg.map_file:
+    for path in sorted(cfg.notes_dir.rglob("*.md")):
+        if path.name.startswith("_") or path.name == cfg.map_file or any(p.startswith(("_", ".")) for p in path.relative_to(cfg.notes_dir).parts[:-1]):
             continue
         try:
             notes.append(parse_note(path))

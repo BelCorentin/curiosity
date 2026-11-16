@@ -45,7 +45,7 @@ the [Claude Agent SDK](https://code.claude.com/docs/en/agent-sdk)). Same config,
 same streak — the skill and the app share all state.
 
 ```bash
-uv tool install -e ~/git/curiosity   # or: uv tool install .
+uv tool install -e ~/git/tools/curiosity   # or: uv tool install .
 curio
 ```
 
